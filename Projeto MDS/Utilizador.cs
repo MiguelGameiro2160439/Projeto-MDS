@@ -18,7 +18,7 @@ namespace Projeto_MDS
         public string N_Contribuinte { get; set; }
         public string Nome { get; set; }
         public string Morada { get; set; }
-        public long NºTelemovel { get; set; }
+        public string NºTelemovel { get; set; }
         public string Email { get; set; }
         public System.DateTime DataNascimento { get; set; }
     }

@@ -16,5 +16,10 @@ namespace Projeto_MDS
         {
             InitializeComponent();
         }
+
+        private void buttonRegistarPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

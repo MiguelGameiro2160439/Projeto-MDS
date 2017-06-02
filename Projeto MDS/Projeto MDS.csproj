@@ -75,6 +75,12 @@
     <Compile Include="FormMarcarConsultas.Designer.cs">
       <DependentUpon>FormMarcarConsultas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegistarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistarPaciente.Designer.cs">
+      <DependentUpon>FormRegistarPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMarcarConsultas.resx">
       <DependentUpon>FormMarcarConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistarPaciente.resx">
+      <DependentUpon>FormRegistarPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

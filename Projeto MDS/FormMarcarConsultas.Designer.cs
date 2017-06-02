@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxPaciente = new System.Windows.Forms.ComboBox();
+            this.buttonRegistarPaciente = new System.Windows.Forms.Button();
             this.listBoxConsultas = new System.Windows.Forms.ListBox();
             this.listBoxMedicoEspecialidade = new System.Windows.Forms.ListBox();
             this.listBoxEspecialidade = new System.Windows.Forms.ListBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerConsulta = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonMarcarConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comboBoxPaciente
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(143, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 25;
+            this.comboBoxPaciente.FormattingEnabled = true;
+            this.comboBoxPaciente.Location = new System.Drawing.Point(143, 23);
+            this.comboBoxPaciente.Name = "comboBoxPaciente";
+            this.comboBoxPaciente.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPaciente.TabIndex = 25;
             // 
-            // button1
+            // buttonRegistarPaciente
             // 
-            this.button1.Location = new System.Drawing.Point(16, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 23);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Registar Paciente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonRegistarPaciente.Location = new System.Drawing.Point(16, 296);
+            this.buttonRegistarPaciente.Name = "buttonRegistarPaciente";
+            this.buttonRegistarPaciente.Size = new System.Drawing.Size(121, 23);
+            this.buttonRegistarPaciente.TabIndex = 24;
+            this.buttonRegistarPaciente.Text = "Registar Paciente";
+            this.buttonRegistarPaciente.UseVisualStyleBackColor = true;
+            this.buttonRegistarPaciente.Click += new System.EventHandler(this.buttonRegistarPaciente_Click);
             // 
             // listBoxConsultas
             // 
@@ -80,12 +81,12 @@
             this.listBoxEspecialidade.Size = new System.Drawing.Size(195, 173);
             this.listBoxEspecialidade.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // dateTimePickerConsulta
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 64);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 20);
-            this.dateTimePicker1.TabIndex = 20;
+            this.dateTimePickerConsulta.Location = new System.Drawing.Point(143, 64);
+            this.dateTimePickerConsulta.Name = "dateTimePickerConsulta";
+            this.dateTimePickerConsulta.Size = new System.Drawing.Size(161, 20);
+            this.dateTimePickerConsulta.TabIndex = 20;
             // 
             // label2
             // 
@@ -105,27 +106,27 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Paciente";
             // 
-            // button2
+            // buttonMarcarConsulta
             // 
-            this.button2.Location = new System.Drawing.Point(530, 296);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Marcar Consulta";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonMarcarConsulta.Location = new System.Drawing.Point(530, 296);
+            this.buttonMarcarConsulta.Name = "buttonMarcarConsulta";
+            this.buttonMarcarConsulta.Size = new System.Drawing.Size(102, 23);
+            this.buttonMarcarConsulta.TabIndex = 26;
+            this.buttonMarcarConsulta.Text = "Marcar Consulta";
+            this.buttonMarcarConsulta.UseVisualStyleBackColor = true;
             // 
             // FormMarcarConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 342);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonMarcarConsulta);
+            this.Controls.Add(this.comboBoxPaciente);
+            this.Controls.Add(this.buttonRegistarPaciente);
             this.Controls.Add(this.listBoxConsultas);
             this.Controls.Add(this.listBoxMedicoEspecialidade);
             this.Controls.Add(this.listBoxEspecialidade);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerConsulta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormMarcarConsultas";
@@ -137,14 +138,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxPaciente;
+        private System.Windows.Forms.Button buttonRegistarPaciente;
         private System.Windows.Forms.ListBox listBoxConsultas;
         private System.Windows.Forms.ListBox listBoxMedicoEspecialidade;
         private System.Windows.Forms.ListBox listBoxEspecialidade;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerConsulta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonMarcarConsulta;
     }
 }

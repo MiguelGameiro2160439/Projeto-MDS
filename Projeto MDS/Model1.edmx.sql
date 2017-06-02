@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/02/2017 11:29:07
+-- Date Created: 06/02/2017 12:46:31
 -- Generated from EDMX file: C:\Users\migue\Desktop\Projeto MDS\Projeto MDS\Model1.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,47 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_MédicoConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ConsultaSet] DROP CONSTRAINT [FK_MédicoConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_EspecialidadeMédico]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[UtilizadorSet_Médico] DROP CONSTRAINT [FK_EspecialidadeMédico];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PacienteConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ConsultaSet] DROP CONSTRAINT [FK_PacienteConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_RececionistaConsulta]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ConsultaSet] DROP CONSTRAINT [FK_RececionistaConsulta];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Médico_inherits_Utilizador]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[UtilizadorSet_Médico] DROP CONSTRAINT [FK_Médico_inherits_Utilizador];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Rececionista_inherits_Utilizador]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[UtilizadorSet_Rececionista] DROP CONSTRAINT [FK_Rececionista_inherits_Utilizador];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[UtilizadorSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[UtilizadorSet];
+GO
+IF OBJECT_ID(N'[dbo].[ConsultaSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ConsultaSet];
+GO
+IF OBJECT_ID(N'[dbo].[EspecialidadeSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[EspecialidadeSet];
+GO
+IF OBJECT_ID(N'[dbo].[PacienteSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PacienteSet];
+GO
+IF OBJECT_ID(N'[dbo].[UtilizadorSet_Médico]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[UtilizadorSet_Médico];
+GO
+IF OBJECT_ID(N'[dbo].[UtilizadorSet_Rececionista]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[UtilizadorSet_Rececionista];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -33,7 +69,7 @@ CREATE TABLE [dbo].[UtilizadorSet] (
     [N_Contribuinte] nvarchar(max)  NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
     [Morada] nvarchar(max)  NOT NULL,
-    [NºTelemovel] bigint  NOT NULL,
+    [N_Telemovel] nvarchar(max)  NOT NULL,
     [Email] nvarchar(max)  NOT NULL,
     [DataNascimento] datetime  NOT NULL
 );
@@ -63,9 +99,9 @@ GO
 -- Creating table 'PacienteSet'
 CREATE TABLE [dbo].[PacienteSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [N_Contribuinte] bigint  NOT NULL,
+    [N_Contribuinte] nvarchar(max)  NOT NULL,
     [Morada] nvarchar(max)  NOT NULL,
-    [NºTelemovel] bigint  NOT NULL,
+    [NºTelemovel] nvarchar(max)  NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
     [Email] nvarchar(max)  NOT NULL,
     [DataNascimento] datetime  NOT NULL
