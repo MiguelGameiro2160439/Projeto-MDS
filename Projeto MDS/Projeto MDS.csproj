@@ -69,6 +69,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdicionarDetalhesConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdicionarDetalhesConsulta.Designer.cs">
+      <DependentUpon>FormAdicionarDetalhesConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEscolheMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEscolheMenu.Designer.cs">
+      <DependentUpon>FormEscolheMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMarcarConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +105,12 @@
     <Compile Include="FormRegistarPaciente.Designer.cs">
       <DependentUpon>FormRegistarPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegistarRececionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistarRececionista.Designer.cs">
+      <DependentUpon>FormRegistarRececionista.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRemarcarConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +122,12 @@
     </Compile>
     <Compile Include="FormTabelaPaciente.Designer.cs">
       <DependentUpon>FormTabelaPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTabelaRecepcionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTabelaRecepcionista.Designer.cs">
+      <DependentUpon>FormTabelaRecepcionista.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -137,6 +161,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAdicionarDetalhesConsulta.resx">
+      <DependentUpon>FormAdicionarDetalhesConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEscolheMenu.resx">
+      <DependentUpon>FormEscolheMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMarcarConsultas.resx">
       <DependentUpon>FormMarcarConsultas.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,11 +179,17 @@
     <EmbeddedResource Include="FormRegistarPaciente.resx">
       <DependentUpon>FormRegistarPaciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistarRececionista.resx">
+      <DependentUpon>FormRegistarRececionista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRemarcarConsultas.resx">
       <DependentUpon>FormRemarcarConsultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTabelaPaciente.resx">
       <DependentUpon>FormTabelaPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTabelaRecepcionista.resx">
+      <DependentUpon>FormTabelaRecepcionista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

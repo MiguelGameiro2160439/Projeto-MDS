@@ -24,7 +24,7 @@ namespace Projeto_MDS
             if (container != null)
             {
                comboBoxPaciente.Items.AddRange(container.PacienteSet.ToArray());
-
+               comboBoxMedico.Items.AddRange(container.UtilizadorSet.OfType<Médico>().ToArray());
             }
 
             refreshListaPacientes();
@@ -58,10 +58,16 @@ namespace Projeto_MDS
         private void buttonMarcarConsulta_Click(object sender, EventArgs e)
         {
             Paciente paciente = null;
+            Médico medico = null;
 
             if (comboBoxPaciente.SelectedIndex > -1)
             {
                 paciente = (Paciente)comboBoxPaciente.SelectedItem;
+            }
+
+            if (comboBoxPaciente.SelectedIndex > -1)
+            {
+                medico = (Médico)comboBoxMedico.SelectedItem;
             }
 
             dateTimePickerConsulta.Format = DateTimePickerFormat.Custom;
@@ -71,8 +77,12 @@ namespace Projeto_MDS
             
             NovaConsula.Data = dateTimePickerConsulta.Value;
             NovaConsula.Descricao = "";
-            NovaConsula.Paciente = paciente;       
+            NovaConsula.Paciente = paciente;
+            NovaConsula.Médico = medico;
 
-        }
+            container.SaveChanges();
+            refreshListaPacientes();
+           
+        }   
     }
 }
