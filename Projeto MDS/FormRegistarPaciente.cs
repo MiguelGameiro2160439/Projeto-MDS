@@ -12,7 +12,6 @@ namespace Projeto_MDS
 {
     public partial class FormRegistarPaciente : Form
     {
-
         public Paciente NovoPaciente { get; private set; }
 
         public FormRegistarPaciente()
@@ -30,10 +29,7 @@ namespace Projeto_MDS
             NovoPaciente.DataNascimento = dateTimePickerPaciente.Value;
             NovoPaciente.NºTelemovel = textBoxTelemovel.Text.Trim();
             NovoPaciente.N_Contribuinte = textBoxContribuinte.Text.Trim();
-            NovoPaciente.Email = textBoxEmail.Text.Trim();
 
-            DialogResult = DialogResult.OK;
-            Close();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Projeto_MDS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMarcarConsultas());
+            Application.Run(new Form1());
         }
     }
 }
