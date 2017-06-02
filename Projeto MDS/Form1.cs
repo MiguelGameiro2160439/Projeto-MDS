@@ -21,7 +21,7 @@ namespace Projeto_MDS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Container consultaselecionada = (Tournament)listBox1.SelectedItem;
+           /* Container consultaselecionada = (Tournament)listBox1.SelectedItem;
 
             if (torneioselecionado != null)
             {
@@ -37,12 +37,12 @@ namespace Projeto_MDS
             textBoxDescription.Text = "";
 
             listBox1.Items.Clear();
-            listBox1.Items.AddRange(Projeto.TournamentSet.ToArray());
+            listBox1.Items.AddRange(Projeto.TournamentSet.ToArray());*/
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Tournament torneioselecionado = (Tournament)listBox1.SelectedItem;
+            /*Tournament torneioselecionado = (Tournament)listBox1.SelectedItem;
 
             if (torneioselecionado != null)
             {
@@ -51,7 +51,7 @@ namespace Projeto_MDS
                 textBoxDescription.Text = torneioselecionado.Description;
                 dateTimePicker1.Value = torneioselecionado.Date;
 
-            }
+            }*/
         }
 
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)

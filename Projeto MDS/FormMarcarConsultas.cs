@@ -21,5 +21,10 @@ namespace Projeto_MDS
         {
 
         }
+
+        private void buttonMarcarConsulta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

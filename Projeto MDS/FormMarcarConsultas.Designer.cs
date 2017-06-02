@@ -114,6 +114,7 @@
             this.buttonMarcarConsulta.TabIndex = 26;
             this.buttonMarcarConsulta.Text = "Marcar Consulta";
             this.buttonMarcarConsulta.UseVisualStyleBackColor = true;
+            this.buttonMarcarConsulta.Click += new System.EventHandler(this.buttonMarcarConsulta_Click);
             // 
             // FormMarcarConsultas
             // 
