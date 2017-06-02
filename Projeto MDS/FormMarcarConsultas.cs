@@ -19,7 +19,8 @@ namespace Projeto_MDS
 
         private void buttonRegistarPaciente_Click(object sender, EventArgs e)
         {
-
+            FormRegistarPaciente newRegisto = new FormRegistarPaciente();
+            newRegisto.ShowDialog();
         }
 
         private void buttonMarcarConsulta_Click(object sender, EventArgs e)
