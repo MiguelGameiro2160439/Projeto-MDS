@@ -83,6 +83,7 @@
             // 
             // dateTimePickerConsulta
             // 
+            this.dateTimePickerConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerConsulta.Location = new System.Drawing.Point(143, 64);
             this.dateTimePickerConsulta.Name = "dateTimePickerConsulta";
             this.dateTimePickerConsulta.Size = new System.Drawing.Size(161, 20);

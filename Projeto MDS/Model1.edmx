@@ -4,102 +4,102 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="Model1StoreContainer">
-    <EntitySet Name="UtilizadorSet" EntityType="Model1.Store.UtilizadorSet" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="ConsultaSet" EntityType="Model1.Store.ConsultaSet" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EspecialidadeSet" EntityType="Model1.Store.EspecialidadeSet" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="PacienteSet" EntityType="Model1.Store.PacienteSet" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="UtilizadorSet_Médico" EntityType="Model1.Store.UtilizadorSet_Médico" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="UtilizadorSet_Rececionista" EntityType="Model1.Store.UtilizadorSet_Rececionista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UtilizadorSet" EntityType="Model1.Store.UtilizadorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConsultaSet" EntityType="Model1.Store.ConsultaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EspecialidadeSet" EntityType="Model1.Store.EspecialidadeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PacienteSet" EntityType="Model1.Store.PacienteSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UtilizadorSet_Médico" EntityType="Model1.Store.UtilizadorSet_Médico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UtilizadorSet_Rececionista" EntityType="Model1.Store.UtilizadorSet_Rececionista" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="MédicoConsulta" Association="Model1.Store.MédicoConsulta">
-      <End EntitySet="UtilizadorSet_Médico" Role="Médico" />
-      <End EntitySet="ConsultaSet" Role="Consulta" />
+      <End Role="Médico" EntitySet="UtilizadorSet_Médico" />
+      <End Role="Consulta" EntitySet="ConsultaSet" />
     </AssociationSet>
     <AssociationSet Name="EspecialidadeMédico" Association="Model1.Store.EspecialidadeMédico">
-      <End EntitySet="EspecialidadeSet" Role="Especialidade" />
-      <End EntitySet="UtilizadorSet_Médico" Role="Médico" />
+      <End Role="Especialidade" EntitySet="EspecialidadeSet" />
+      <End Role="Médico" EntitySet="UtilizadorSet_Médico" />
     </AssociationSet>
     <AssociationSet Name="PacienteConsulta" Association="Model1.Store.PacienteConsulta">
-      <End EntitySet="PacienteSet" Role="Paciente" />
-      <End EntitySet="ConsultaSet" Role="Consulta" />
+      <End Role="Paciente" EntitySet="PacienteSet" />
+      <End Role="Consulta" EntitySet="ConsultaSet" />
     </AssociationSet>
     <AssociationSet Name="RececionistaConsulta" Association="Model1.Store.RececionistaConsulta">
-      <End EntitySet="UtilizadorSet_Rececionista" Role="Rececionista" />
-      <End EntitySet="ConsultaSet" Role="Consulta" />
+      <End Role="Rececionista" EntitySet="UtilizadorSet_Rececionista" />
+      <End Role="Consulta" EntitySet="ConsultaSet" />
     </AssociationSet>
     <AssociationSet Name="FK_Médico_inherits_Utilizador" Association="Model1.Store.FK_Médico_inherits_Utilizador">
-      <End EntitySet="UtilizadorSet" Role="Utilizador" />
-      <End EntitySet="UtilizadorSet_Médico" Role="Médico" />
+      <End Role="Utilizador" EntitySet="UtilizadorSet" />
+      <End Role="Médico" EntitySet="UtilizadorSet_Médico" />
     </AssociationSet>
     <AssociationSet Name="FK_Rececionista_inherits_Utilizador" Association="Model1.Store.FK_Rececionista_inherits_Utilizador">
-      <End EntitySet="UtilizadorSet" Role="Utilizador" />
-      <End EntitySet="UtilizadorSet_Rececionista" Role="Rececionista" />
+      <End Role="Utilizador" EntitySet="UtilizadorSet" />
+      <End Role="Rececionista" EntitySet="UtilizadorSet_Rececionista" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="UtilizadorSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-    <Property Name="N_Contribuinte" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="Nome" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="Morada" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="NºTelemovel" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="Email" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="DataNascimento" Nullable="false" Type="datetime" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="N_Contribuinte" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NºTelemovel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataNascimento" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="ConsultaSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-    <Property Name="Data" Nullable="false" Type="datetime" />
-    <Property Name="Descricao" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="id_paciente" Nullable="false" Type="int" />
-    <Property Name="id_medico" Nullable="false" Type="int" />
-    <Property Name="id_rececionista" Nullable="false" Type="int" />
-    <Property Name="Médico_Id" Nullable="false" Type="int" />
-    <Property Name="Rececionista_Id" Nullable="false" Type="int" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_paciente" Type="int" Nullable="false" />
+    <Property Name="id_medico" Type="int" Nullable="false" />
+    <Property Name="id_rececionista" Type="int" Nullable="false" />
+    <Property Name="Médico_Id" Type="int" Nullable="false" />
+    <Property Name="Rececionista_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="EspecialidadeSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-    <Property Name="Nome" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="Descricao" Nullable="false" Type="nvarchar(max)" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="PacienteSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-    <Property Name="N_Contribuinte" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="Morada" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="NºTelemovel" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="Nome" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="Email" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="DataNascimento" Nullable="false" Type="datetime" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="N_Contribuinte" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NºTelemovel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataNascimento" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="UtilizadorSet_Médico">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="id_especialidade" Nullable="false" Type="int" />
-    <Property Name="HoraEntrada" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="HoraSaida" Nullable="false" Type="nvarchar(max)" />
-    <Property Name="Id" Nullable="false" Type="int" />
+    <Property Name="id_especialidade" Type="int" Nullable="false" />
+    <Property Name="HoraEntrada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="HoraSaida" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="UtilizadorSet_Rececionista">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Nullable="false" Type="int" />
+    <Property Name="Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="MédicoConsulta">
-    <End Type="Model1.Store.UtilizadorSet_Médico" Multiplicity="1" Role="Médico" />
-    <End Type="Model1.Store.ConsultaSet" Multiplicity="*" Role="Consulta" />
+    <End Role="Médico" Type="Model1.Store.UtilizadorSet_Médico" Multiplicity="1" />
+    <End Role="Consulta" Type="Model1.Store.ConsultaSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Médico">
         <PropertyRef Name="Id" />
@@ -110,8 +110,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="EspecialidadeMédico">
-    <End Type="Model1.Store.EspecialidadeSet" Multiplicity="1" Role="Especialidade" />
-    <End Type="Model1.Store.UtilizadorSet_Médico" Multiplicity="*" Role="Médico" />
+    <End Role="Especialidade" Type="Model1.Store.EspecialidadeSet" Multiplicity="1" />
+    <End Role="Médico" Type="Model1.Store.UtilizadorSet_Médico" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Especialidade">
         <PropertyRef Name="Id" />
@@ -122,8 +122,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="PacienteConsulta">
-    <End Type="Model1.Store.PacienteSet" Multiplicity="1" Role="Paciente" />
-    <End Type="Model1.Store.ConsultaSet" Multiplicity="*" Role="Consulta" />
+    <End Role="Paciente" Type="Model1.Store.PacienteSet" Multiplicity="1" />
+    <End Role="Consulta" Type="Model1.Store.ConsultaSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Paciente">
         <PropertyRef Name="Id" />
@@ -134,8 +134,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="RececionistaConsulta">
-    <End Type="Model1.Store.UtilizadorSet_Rececionista" Multiplicity="1" Role="Rececionista" />
-    <End Type="Model1.Store.ConsultaSet" Multiplicity="*" Role="Consulta" />
+    <End Role="Rececionista" Type="Model1.Store.UtilizadorSet_Rececionista" Multiplicity="1" />
+    <End Role="Consulta" Type="Model1.Store.ConsultaSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Rececionista">
         <PropertyRef Name="Id" />
@@ -146,10 +146,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Médico_inherits_Utilizador">
-    <End Type="Model1.Store.UtilizadorSet" Multiplicity="1" Role="Utilizador">
+    <End Role="Utilizador" Type="Model1.Store.UtilizadorSet" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Type="Model1.Store.UtilizadorSet_Médico" Multiplicity="0..1" Role="Médico" />
+    <End Role="Médico" Type="Model1.Store.UtilizadorSet_Médico" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Utilizador">
         <PropertyRef Name="Id" />
@@ -160,10 +160,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Rececionista_inherits_Utilizador">
-    <End Type="Model1.Store.UtilizadorSet" Multiplicity="1" Role="Utilizador">
+    <End Role="Utilizador" Type="Model1.Store.UtilizadorSet" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Type="Model1.Store.UtilizadorSet_Rececionista" Multiplicity="0..1" Role="Rececionista" />
+    <End Role="Rececionista" Type="Model1.Store.UtilizadorSet_Rececionista" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Utilizador">
         <PropertyRef Name="Id" />
@@ -294,7 +294,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping CdmEntityContainer="Model1Container" StorageEntityContainer="Model1StoreContainer">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
     <EntitySetMapping Name="UtilizadorSet">
       <EntityTypeMapping TypeName="IsTypeOf(Model1.Utilizador)">
         <MappingFragment StoreEntitySet="UtilizadorSet">
